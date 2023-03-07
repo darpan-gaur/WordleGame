@@ -1,0 +1,111 @@
+* {
+    color: #ffffff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
+}
+
+body{
+    background-color: #121213;
+}
+
+.gameContainer{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titleContainer{
+    text-align: center;
+    width: 510px;
+    border-bottom: solid 1px #3a3a3c;
+}
+
+.tileContainer{
+    width: 330px;
+    margin-bottom: 30px;
+}
+
+.keyContainer{
+    width: 510px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.keyContainer button {
+    width: 43px;
+    height: 58px;
+    border-radius: 4px;
+    border: none;
+    background-color: #818384;
+    margin: 4px;
+}
+
+.keyContainer button:nth-child(11) {
+    margin-left: 30px;
+}
+
+.keyContainer button:nth-child(20),
+.keyContainer button:nth-child(28) {
+    width: 68px;
+
+}
+
+.tileContainer div {
+    display: flex;
+}
+
+.tileContainer .tile {
+    width: 62px;
+    height: 62px;
+    border: 2px solid #3a3a3c;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+}
+
+.messageContianer {
+    height: 30px;
+}
+
+.messageContianer p {
+    background-color: #818384;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0;
+}
+
+.tile.flip  {
+    animation: 0.5s linear flipping;
+}
+
+@keyframes flipping {
+    0% {
+        transform: rotateX(0deg);
+    }
+    50% {
+        transform: rotateX(90deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+/* important so that backgrounf color should be overwritten */
+/* order is also important  gray -> yellow -> green */
+.grayOverlay {
+    background-color: #3a3a3c !important;
+    border: none !important;
+}
+
+.yellowOverlay {
+    background-color: #b59f3a !important;
+    border: none !important;
+}
+
+.greenOverlay {
+    background-color: #538d4e !important;
+    border: none !important;
+}
